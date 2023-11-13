@@ -1,0 +1,162 @@
+* {
+    --primary-bg : #A52FC1;
+    --bubles-color : #AE44C8;
+    --contra:#29282a;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3rem;
+}
+
+.main-con{
+    height: 100%;
+    width: 100%;
+    background: var(--primary-bg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 0.7rem;
+    border: 2px solid black;
+}
+
+.bubles{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: var(--bubles-color);
+    position: absolute;
+}
+.bubles:nth-child(1){
+    top: -30px;
+    right: -50px;
+}
+.bubles:nth-child(2){
+    width: 150px;
+    height: 150px;
+    bottom: 60px;
+}
+.bubles:nth-child(3){
+    width: 200px;
+    height: 200px;
+    bottom: 100px;
+    left: 80px;
+}
+.bubles:nth-child(4){
+    width: 100px;
+    height: 100px;
+    top: 70px;
+    left: 250px;
+}
+.bubles:nth-child(5){
+    width: 170px;
+    height: 170px;
+    top: 70px;
+}
+.bubles:nth-child(6){
+    width: 350px;
+    height: 350px;
+    bottom: -150px;
+    right: -50px;
+}
+.bubles:nth-child(7){
+    width: 100px;
+    height: 100px;
+    top: -10px;
+    left: -20px;
+}
+
+/* navbar */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--contra);
+    height: 3rem;
+    z-index: 100;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    gap: 2;
+    padding: 0 1rem;
+}
+nav > div{
+    flex-grow: 1;
+}
+.log-con{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.log-con > img{
+        height: 50%;
+}
+
+
+.user-info-con{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 100%;
+    gap: 1rem;
+    color: white;
+}
+.user-info-con > img{
+        height: 80%;
+        background: white;
+        border-radius: 100%;
+        border: 2px solid var(--bubles-color);
+}
+@media (max-width:768px) {
+    .bubles{
+        display: none;
+    }
+    .bubles:nth-child(1){
+        scale: 0.8;
+        display: block;
+
+    }
+    .bubles:nth-child(2){
+        display: block;
+
+    }
+    .bubles:nth-child(3){
+        display: block;
+        left: -100px;
+        bottom: 200px;
+
+    }
+    .bubles:nth-child(4){
+        display: block;
+        left: 50px;
+        top: 200px;
+
+    }
+    .bubles:nth-child(5){
+        display: block;
+        right: -70px;
+        top: 300px;
+
+    }
+    .bubles:nth-child(6){
+
+    }
+    .bubles:nth-child(7){
+        display: block;
+        top: 350px;
+        left: 180px;
+    }
+}
